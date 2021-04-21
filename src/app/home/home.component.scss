@@ -1,0 +1,39 @@
+.container {
+  width: auto;
+  max-height: 100vh;
+  .head {
+    display: flex;
+    .title {
+      h1 {
+        position: absolute;
+        top: 62px;
+        text-align: center;
+      }
+    }
+    .para {
+        padding: 152px 0 0 0;
+      p {
+        padding: 0 0 227px 0;
+        text-align: justify;
+        letter-spacing: 3px;
+        display: contents;
+      }
+    }
+    .button-home{
+        position: absolute;
+        text-align: center;
+        padding: 0 0 279px 0;
+        button{
+        background-color: aqua;
+          }
+     }
+    .home-img {
+      img {
+        max-width: 389px;
+        max-height: 242px;
+        position: absolute;
+        left: auto;
+      }
+    }
+  }
+}
