@@ -1,20 +1,57 @@
 <div class="login-container">
-    <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
-  
-        <div class="login-email">
-            <label>
-                Email
-                <input type="text" formControlName="email" placeholder="email">
-              </label>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="login-email">
+      <label class="email-e">
+        <p>Email</p>
+        <input
+          type="text"
+          class="email-input"
+          formControlName="email"
+          [ngClass]="{
+            'error-box':
+              loginForm.controls.email.touched &&
+              loginForm.controls.email.errors
+          }"
+          placeholder="email"
+        />
+        <div class="email-inv-req">
+          <span
+            class="email-req-inv"
+            *ngIf="loginForm.controls.email.errors?.email"
+            >Email is invalid</span
+          >
+          <span *ngIf="loginForm.controls.email.errors?.required"
+            >Email is required</span
+          >
         </div>
-      
-        <div class="login-password">
-            <label>
-                Password
-                <input type="password" formControlName="password" placeholder="password">
-              </label>
-        </div>
-        <button type="submit" [disabled]="!LoginForm.valid">Submit</button>
-      </form>
-      
+      </label>
+    </div>
+    <div class="login-password">
+      <label>
+        <p>Password</p>
+        <input
+          type="password"
+          formControlName="password"
+          placeholder="password"
+          [ngClass]="{
+            'error-box':
+              loginForm.controls.password.touched &&
+              loginForm.controls.password.errors
+          }"
+        />
+        <span *ngIf="loginForm.controls.password.errors?.required"
+          >Password is required</span
+        >
+      </label>
+    </div>
+    <button type="submit" [disabled]="!loginForm.valid">Submit</button>
+  </form>
+  <div class="create-account">
+    <a routerLink="/signup-component" routerLinkActive="active"
+      >create a account</a
+    >
+  </div>
+  <div class="login-img">
+    <img src="../assets/login.svg" alt="" />
+  </div>
 </div>

@@ -1,25 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { MustMatch } from './helper/must-match.validator';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-
-  LoginForm = new FormGroup({
-    email: new FormControl(''),
-    password: new FormControl(''),
-  });
-
+  loginForm: FormGroup;
+  registerForm: FormGroup;
+    submitted = false;
   onSubmit() {
-    console.log(this.LoginForm.value);
+    console.log(this.loginForm.value)
   }
 
-  constructor() { }
+  constructor(
+    private formBuilder: FormBuilder
+  ) {}
 
   ngOnInit(): void {
+    this.loginForm = this.formBuilder.group({
+      email: ['', [Validators.email, Validators.required]],
+      password: ['', Validators.required, Validators.minLength(6)]
+    })
+    this.registerForm = this.formBuilder.group({
+      email: ['', [Validators.email, Validators.required]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
+    })
   }
-
 }

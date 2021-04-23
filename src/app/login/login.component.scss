@@ -1,0 +1,60 @@
+.login-container {
+    max-width : 100%;
+    max-height: 100vh;
+
+    form {
+        .login-email {
+            position       : absolute;
+            display        : flex;
+            flex-wrap      : wrap;
+            justify-content: center;
+            top            : 167px;
+
+            .email-e {
+
+                p {
+                    color : aqua;
+                    margin: 0 0 4px 0;
+
+                    input {
+                        .email-input {}
+                    }
+                }
+            }
+
+            span {
+                color: #ffb700;
+            }
+        }
+    }
+
+    .login-password {
+        position       : absolute;
+        display        : flex;
+        flex-wrap      : wrap;
+        justify-content: center;
+        top            : 250px;
+        right          : -3px;
+
+        label {
+            p {
+                color : aqua;
+                margin: 0 0 4px 0;
+            }
+
+            input {}
+
+            span {
+                display: block;
+                color  : #ffb700;
+            }
+        }
+    }
+}
+
+
+.error-box {
+    border-color: red;
+    color       : red;
+
+}
