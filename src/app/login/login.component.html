@@ -33,25 +33,28 @@
           type="password"
           formControlName="password"
           placeholder="password"
-          [ngClass]="{
-            'error-box':
-              loginForm.controls.password.touched &&
-              loginForm.controls.password.errors
-          }"
+          
         />
         <span *ngIf="loginForm.controls.password.errors?.required"
           >Password is required</span
         >
       </label>
     </div>
-    <button type="submit" [disabled]="!loginForm.valid">Submit</button>
+    <div class="login-button">
+      <button
+        type="submit"
+        [disabled]="!loginForm.valid"
+      >
+        Login
+      </button>
+    </div>
   </form>
   <div class="create-account">
     <a routerLink="/signup-component" routerLinkActive="active"
       >create a account</a
     >
   </div>
-  <div class="login-img">
+  <!-- <div class="login-img">
     <img src="../assets/login.svg" alt="" />
-  </div>
+  </div> -->
 </div>

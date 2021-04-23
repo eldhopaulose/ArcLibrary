@@ -26,15 +26,29 @@
                 color: #ffb700;
             }
         }
+        
+        .login-button{
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 0 245px 0;
+        }
     }
-
+    .create-account{
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 0 218px 0;
+        right: 60px;
+    }
     .login-password {
         position       : absolute;
         display        : flex;
         flex-wrap      : wrap;
         justify-content: center;
         top            : 250px;
-        right          : -3px;
 
         label {
             p {
