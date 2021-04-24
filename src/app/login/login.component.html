@@ -8,6 +8,7 @@
           class="email-input"
           formControlName="email"
           [ngClass]="{
+            'boder-color': !loginForm.controls.email.touched,
             'error-box':
               loginForm.controls.email.touched &&
               loginForm.controls.email.errors
@@ -31,18 +32,27 @@
         <p>Password</p>
         <input
           type="password"
+          [type]="hide ? 'password' : 'text'"
           formControlName="password"
           placeholder="password"
-          
+          [ngClass]="{
+            'boder-color': !loginForm.controls.password.touched,
+            'error-box':
+              loginForm.controls.password.touched &&
+              loginForm.controls.password.errors
+          }"
         />
         <span *ngIf="loginForm.controls.password.errors?.required"
           >Password is required</span
         >
+        <!-- <button class="icon-btn" (click)="eye()"><i class="bi bi-eye-fill"></i></button> -->
+        <i (click)="eye()" class="bi bi-eye-fill"></i>
       </label>
     </div>
     <div class="login-button">
       <button
         type="submit"
+        class="btn btn-outline-primary"
         [disabled]="!loginForm.valid"
       >
         Login
@@ -50,11 +60,14 @@
     </div>
   </form>
   <div class="create-account">
-    <a routerLink="/signup-component" routerLinkActive="active"
+    <a
+      class="text-primary"
+      routerLink="/signup-component"
+      routerLinkActive="active"
       >create a account</a
     >
   </div>
   <!-- <div class="login-img">
-    <img src="../assets/login.svg" alt="" />
+    <img src="../../assets/login.svg" alt="login" />
   </div> -->
 </div>

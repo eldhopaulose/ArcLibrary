@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { MustMatch } from './helper/must-match.validator';
+
 
 @Component({
   selector: 'app-login',
@@ -11,6 +11,7 @@ import { MustMatch } from './helper/must-match.validator';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   registerForm: FormGroup;
+  hide : boolean = false;
     submitted = false;
   onSubmit() {
     console.log(this.loginForm.value)
@@ -30,4 +31,8 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]]
     })
   }
+
+eye() {
+  this.hide = !this.hide;
+}
 }
