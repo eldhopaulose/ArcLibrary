@@ -2,7 +2,7 @@
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="login-email">
       <label class="email-e">
-        <p>Email</p>
+        <p class="text-primary">Email</p>
         <input
           type="text"
           class="email-input"
@@ -29,7 +29,7 @@
     </div>
     <div class="login-password">
       <label>
-        <p>Password</p>
+        <p class="text-primary">Password</p>
         <input
           type="password"
           [type]="hide ? 'password' : 'text'"
@@ -67,7 +67,7 @@
       >create a account</a
     >
   </div>
-  <!-- <div class="login-img">
+  <div class="login-img">
     <img src="../../assets/login.svg" alt="login" />
-  </div> -->
+  </div>
 </div>

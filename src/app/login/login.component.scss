@@ -1,14 +1,6 @@
-
 .login-container {
-    background-image   : url("../../assets/main.jpg");
     max-width : 100%;
     max-height: 100vh;
-    // background-repeat: no-repeat;
-    // position: relative;
-    
-    // margin-left: auto;
-    // margin-right: auto;
-    
 
     form {
         .login-email {
@@ -21,12 +13,9 @@
             .email-e {
 
                 p {
-                    color : aqua;
                     margin: 0 0 4px 0;
 
-                    input {
-                        
-                    }
+                    input {}
                 }
             }
 
@@ -44,16 +33,18 @@
         }
     }
 
+
     .create-account {
-        position: absolute;
-        display: flex;
-        flex-wrap: wrap;
+        position       : absolute;
+        display        : flex;
+        flex-wrap      : wrap;
         justify-content: center;
-        margin: 0 0 135px 0;
-        right: 187px;
-       a{
-        text-decoration: none;
-       }
+        margin         : 0 0 135px 0;
+        right          : 187px;
+
+        a {
+            text-decoration: none;
+        }
     }
 
     .login-password {
@@ -65,23 +56,23 @@
 
         label {
             p {
-                color: aqua;
                 margin: 41px 0 4px 0;
             }
 
             input {
-            
-                height: 60px;
-                width: 100%;
-                font-size: 1.5em;
+
+                height       : 60px;
+                width        : 100%;
+                font-size    : 1.5em;
                 border-radius: 30px;
-                text-align: center;
-                transition: width 0.5s;
+                text-align   : center;
+                transition   : width 0.5s;
                 padding-right: 20px;
-                outline: none;
-                
+                outline      : none;
+                font-family  : inherit;
+
             }
-           
+
 
             span {
                 display: block;
@@ -90,23 +81,29 @@
         }
     }
 }
-.email-input {  height: 60px;
-    width: 100%;
-    font-size: 1.5em;
+
+.email-input {
+    height       : 60px;
+    width        : 100%;
+    font-size    : 1.5em;
     border-radius: 30px;
-    text-align: center;
-    transition: width 0.5s;
+    text-align   : center;
+    transition   : width 0.5s;
     padding-right: 20px;
-    outline: none;}
-i{    display: flex;
-    flex-wrap: wrap;
+    font-family  : inherit;
+    outline      : none;
+}
+
+i {
+    display        : flex;
+    flex-wrap      : wrap;
     justify-content: center;
-    cursor: pointer;
-    position: absolute;
-    font-size: 1.5em;
-    top: 88px;
-    left: 243px;
-    border: none;
+    cursor         : pointer;
+    position       : absolute;
+    font-size      : 1.5em;
+    top            : 88px;
+    left           : 243px;
+    border         : none;
 }
 
 
@@ -115,6 +112,14 @@ i{    display: flex;
     color       : red;
 
 }
-.boder-color{
+
+.boder-color {
     border: 1px solid #0d6efd;
+}
+
+.login-img {
+    img {
+        max-width: 200px;
+        position : absolute;
+    }
 }
